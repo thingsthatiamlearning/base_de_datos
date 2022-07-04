@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block titulo %} Como funciona {% endblock %}
+
+{% block contenido %}
+
+<br>
+<h2>Inicio</h2>
+<p>Comenzaras en la pagina principal, en la cual tendras dos opciones</p>
+<ul>
+    <li>Ver listado</li>
+    <p>Aqui podras acceder a la lista de los clientes que podras ver toda su informacion</p>
+    <li>¿Como funciona?</li>
+    <p>La pagina donde podras ver como funciona esta aplicacion</p>
+</ul>
+<h2>Pagina listado</h2>
+<p>
+    Aqui se podra ver la informacion de todos los clientes añadidos, ademas que se podra añadir un nuevo 
+    cliente, editar la informacion de un cliente ya existente y eliminar a un cliente ya existente
+</p>
+<h4>Añadir cliente</h4>
+<p>
+    Puedes hacer clic en el boton: <a name="" id="" class="btn btn-success" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+    </svg> Añadir un nuevo cliente</a> y este boton te llevara a la pagina para crear un nuevo cliente 
+</p>
+<h4>Editar cliente</h4>
+<a>
+    Al hacer clic en el boton: <a name="" id="" class="btn btn-primary" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+        </svg></a> estaras entrando a una pagina en la cual podras ver la informacion de un cliente en especifico
+        donde podras modificar los datos escritos ahi 
+</a>
+<h4>Eliminar cliente</h4>
+<p>
+    Existe el boton: <a name="" id="" class="btn btn-danger" href="#" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+        </svg></a> que al pulsarlo se estaria eliminando el cliente y borrandolo de la base de datos
+</p>
+<h5 style="color: red;">Nota importante</h5>
+<p>Al pulsar el boton eliminar, este no preguntara si se esta seguro de eliminar el cliente porque este al ser pulsado
+    se eliminara automaticamente
+</p>
+<h2>Pagina Añadir cliente</h2>
+<p>En esta pagina se te pediran los datos de un nuevo cliente el cual todos los datos a rellenar seran obligatorios</p>
+<h5>Los datos que se pediran son: </h5>
+<ul>
+    <li>Nombre</li><p>El nombre completo del cliente</p>
+    <li>Correo</li><p>correo electronico completo. Este correo debe contener todas las caractaresticas de un correo ex. correo@ejemplo.com</p>
+    <li>Numero de telefono</li><p>El numero de telefono debe ser compuesto por 13 caracteres. Con el codigo del pais, la extension del estado y el numero. Ex. +526144477836</p>
+    <li>Lugar donde vive</li><p>El lugar en el que recide el cliente actualmente</p>
+    <li>Nota</li><p>Una nota adicional en la cual se quiera especificar datos adicionales del cliente</p>
+</ul>
+<h2>Pagina editar cliente</h2>
+<p>Esta pagina mostrara la misma pagina de "Añadir cliente" 👆🏿👆🏿👆🏿 pero con los datos que un cliente ua existenete posee, por lo que al modificar los campos del cliente, estos se modicaran igual en la base de datos</p>
+
+{% endblock %}

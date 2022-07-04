@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}
+
+    <style>
+        .inf{
+            border: solid;
+            border-width: 1px;
+            border-radius: 10px;
+        }
+        .button{
+            border: solid;
+            border-width: 1px;
+            width: 10%;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background-color:steelblue;
+        }
+        .text{
+            margin-left: 18%;
+        }
+
+    </style>
+
+    <br>
+   <div class="inf">
+    <h1>Hola</h1>
+    <p>Para poder ver el listado de todos los clientes puedes hacer clic en el boton "Ver listado",
+        si quieres saber como funciona la pagina, has clic en "¿Como funciona?"
+    </p>
+    <div class="button">
+        <a class="text nav-item nav-link active" href="{% url 'lista' %}">Ver listado</a>
+    </div>
+   </div> 
+
+{% endblock %}
+
+<!--
+user; raul
+password; Admin 123
+
+-->
+
+<!--
+    py manage.py runserver 192.168.0.5:8000
+    para correr el programa en un servidor local alojado por esta computadora
+-->

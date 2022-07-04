@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %} Editar Cliente {% endblock %}
+
+{% block contenido %}
+
+    <style>
+        .card{
+            margin-top: 2%;
+        }
+    </style>
+
+    <div class="card">
+        <div class="card-header">
+            Editar informacion del cliente
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del cliente</h4>
+            {% include 'clientes/form.html' %}
+        </div>
+    </div>
+
+{% endblock %}
