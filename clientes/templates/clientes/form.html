@@ -1,8 +1,9 @@
 <form enctype="multipart/form-data" method="post">
-
+    <!--Para que DJango permita que se manipule la informacion-->
     {% csrf_token %}
+    <!--El nombre formulario viene desde el views.py-->
     {% for campo in formulario %}
-
+    <!--Campo.label es para que pueda cambiar el nombre de lo que se esta considerando segun los datos que tenemos en el models.py-->
     <label for="" class="form-label">{{ campo.label }}</label>
 
     <input 
@@ -14,7 +15,7 @@
         placeholder="{{ campo.label }}"
         value="{{ campo.value | default:'' }}"
     />
-
+<!--Para poder ver los errores-->
     <div class="col-12" help-text>{{campo.errors}}</div>
 
     {% endfor %}

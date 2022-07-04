@@ -1,3 +1,4 @@
+#Para utilizar todos los campos de los clientes en el models.py
 from django import forms
 from .models import Cliente
 
