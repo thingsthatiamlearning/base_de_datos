@@ -11,4 +11,5 @@ class clienteadmin(admin.ModelAdmin):
     #Para que se pueda buscar en el modo admin por nombre y correo
     search_fields = ['Nombre', 'correoElectronico']
 
+
 admin.site.register(Cliente, clienteadmin)

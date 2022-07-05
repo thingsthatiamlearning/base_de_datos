@@ -74,8 +74,9 @@
                 {% for cliente in Clientes %}
     
                     <tr>
-                        <td>{{ cliente.id }}</td>
-                        <td>{{ cliente.Nombre }}</td>
+                        <!--Este campo se utilizo para mostrar la funcion del modelo-->
+                        <td>{{ cliente.get_rfc }}</td>
+                        <td>{{ cliente.apellidoPaterno }} {{  cliente.apellidoMaterno }} {{ cliente.Nombre }}</td>
                         <td>{{ cliente.correoElectronico}}</td>
                         <td>{{ cliente.numeroTelefonico }}</td>
                         <td>{{ cliente.vivienda }}</td>

@@ -17,3 +17,8 @@ class Cliente(models.Model):
     def __str__(self):
         fila = "Nombre: " + self.Nombre + " - " + "Numero de telefono: " + str(self.numeroTelefonico)
         return fila
+
+    #Se utiliza solo para sacar ciertos datos del nombre, apellidos y fecha de nacimiento. En este caso para el RFC
+    def get_rfc(self):
+        rfc = self.apellidoPaterno[0:2] + self.apellidoMaterno[0] + self.Nombre[0] + str(self.nacimiento)[2:4] + str(self.nacimiento)[5:7] + str(self.nacimiento)[8:10]
+        return rfc.upper()
