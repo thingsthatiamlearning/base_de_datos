@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from datetime import datetime
 from phonenumber_field.modelfields import PhoneNumberField
@@ -10,7 +11,7 @@ class Cliente(models.Model):
     apellidoMaterno         = models.CharField(max_length=20, verbose_name="Apellido Materno", default="")
     nacimiento              = models.DateField(verbose_name="Nacimiento: dd/mm/yyyy")
     correoElectronico       = models.EmailField(max_length=200, verbose_name="Correo", blank=True)
-    numeroTelefonico        = PhoneNumberField(unique = True, null = False, blank = False)
+    numeroTelefonico        = PhoneNumberField(unique = True, null = False, blank = False, verbose_name='Numero de telefono')
     vivienda                = models.CharField(max_length=100, verbose_name="Lugar Donde Vive")
     nota                    = models.TextField(verbose_name="nota", blank=True)
 
