@@ -1,5 +1,5 @@
 <form enctype="multipart/form-data" method="post">
-    <!--Para que DJango permita que se manipule la informacion-->
+    <!--Para que DJango permita que se manipule la informacion desde los formularios-->
     {% csrf_token %}
     <!--El nombre formulario viene desde el views.py-->
     {% for campo in formulario %}

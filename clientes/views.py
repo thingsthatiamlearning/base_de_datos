@@ -21,10 +21,13 @@ def index(request):
     print(queryset)
     #Esto es para que se muestren todos los clientes
     Clientes = Cliente.objects.all
-    #Este if es para que se muestren los clientes ya sea que se introduzcan por nombre o id. Estos nombres son los dados en el views.py
+    #Este if es para que se muestren los clientes ya sea que se introduzcan por nombre o numero de telefono. Estos nombres son los dados en el views.py
     if queryset:
         Clientes = Cliente.objects.filter(
             Q(Nombre__icontains = queryset) |
+            Q(apellidoPaterno__icontains = queryset) |
+            Q(apellidoMaterno__icontains = queryset) |
+            Q(numeroTelefonico__icontains = queryset) |
             Q(id__icontains = queryset)
         ).distinct()
         #                                           ↓↓↓ Este nombre es el que se le pone en los html para los for

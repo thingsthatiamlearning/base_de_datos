@@ -84,6 +84,8 @@ WSGI_APPLICATION = 'base_de_datos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#Se configuran las bases de datos con mysql en este caso se utiliza MariaDB para las bases de datos
+#Este tipo de datos puede variar dependiendo de la configuracion de cada base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

@@ -16,7 +16,6 @@
         margin-left: 30%;
         margin-top: 2%;
     }
-
     
 
 </style>
@@ -60,7 +59,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>ID de cliente</th>
                     <th>Nombre</th>
                     <th>Correo electronico</th>
                     <th>Numero de telefono</th>
@@ -74,8 +73,8 @@
                 {% for cliente in Clientes %}
     
                     <tr>
-                        <!--Este campo se utilizo para mostrar la funcion del modelo-->
-                        <td>{{ cliente.get_rfc }}</td>
+                        <!--Este campo se utilizo para mostrar la funcion del modelo para sacar el rfc-->
+                        <td><a href="https://www.google.com" target="_blank">{{ cliente.get_rfc }}</a></td>
                         <td>{{ cliente.apellidoPaterno }} {{  cliente.apellidoMaterno }} {{ cliente.Nombre }}</td>
                         <td>{{ cliente.correoElectronico}}</td>
                         <td>{{ cliente.numeroTelefonico }}</td>

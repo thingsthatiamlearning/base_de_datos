@@ -23,3 +23,11 @@ class Cliente(models.Model):
     def get_rfc(self):
         rfc = self.apellidoPaterno[0:2] + self.apellidoMaterno[0] + self.Nombre[0] + str(self.nacimiento)[2:4] + str(self.nacimiento)[5:7] + str(self.nacimiento)[8:10]
         return rfc.upper()
+    
+    def nombre_Completo(self):
+        nombreCompleto = self.Nombre+" "+self.apellidoPaterno+" "+self.apellidoMaterno
+        return nombreCompleto
+
+    def nombre_ordenado(self):
+        nombreOrdenado = self.apellidoPaterno + " " + self.apellidoMaterno + " " + self.Nombre
+        return nombreOrdenado
