@@ -31,4 +31,3 @@ class Cliente(models.Model):
     def nombre_ordenado(self):
         nombreOrdenado = self.apellidoPaterno + " " + self.apellidoMaterno + " " + self.Nombre
         return nombreOrdenado
-        
