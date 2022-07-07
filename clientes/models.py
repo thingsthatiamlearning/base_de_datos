@@ -14,6 +14,7 @@ class Cliente(models.Model):
     numeroTelefonico        = PhoneNumberField(unique = True, null = False, blank = False, verbose_name='Numero de telefono')
     vivienda                = models.CharField(max_length=100, verbose_name="Lugar Donde Vive")
     nota                    = models.TextField(verbose_name="nota", blank=True)
+    url                     = models.URLField(verbose_name="Enlace", blank=True)
 
     def __str__(self):
         fila = "Nombre: " + self.Nombre + " - " + "Numero de telefono: " + str(self.numeroTelefonico)

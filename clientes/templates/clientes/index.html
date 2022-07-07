@@ -74,7 +74,7 @@
     
                     <tr>
                         <!--Este campo se utilizo para mostrar la funcion del modelo para sacar el rfc-->
-                        <td><a href="https://www.google.com" target="_blank">{{ cliente.get_rfc }}</a></td>
+                        <td><a href="{{ cliente.url }}" target="_blank">{{ cliente.get_rfc }}</a></td>
                         <td>{{ cliente.apellidoPaterno }} {{  cliente.apellidoMaterno }} {{ cliente.Nombre }}</td>
                         <td>{{ cliente.correoElectronico}}</td>
                         <td>{{ cliente.numeroTelefonico }}</td>
